@@ -29,7 +29,8 @@ fun pokedex(pok1 : String ) {
         "Ryhorn", "Diglets" -> (println("Tipo Tierra"))
         "Slaking", "Snorlax" -> (println("Tipo Normal"))
         "Gengar", "Mimikyu" -> (println("Tipo Fantasma"))
+        "Metagross", "Steelix" -> (println("Tipo Metal"))
         else -> println("Pokemon desconocido")
-    } 
+    }
 
 }
