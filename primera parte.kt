@@ -1,26 +1,31 @@
 package com.example.pokedex
-//Crear un programa utilzando el condicional WHEN.
-//Vamos a crear un programa que define el tipo de nuestro pokemon dependiendo cual atrapemos.
-//ejemplo : Atrapamos un Pikachu y devolvemos por consola su tipo = "Electrico"
-//Vamos a manejar 6 tipos y el resto seran "unknown"
-//- Electrico
-//- Fuego
-//- Agua
-//- Tierra
-//- Normal
-//- Fantasma
-//Luego vamos a crear un repositorio nuevo en el cual vamos a crear 2 branches: develop y pokemon
-//Dentro de la branch pokemon vamos a agregar un nuevo tipo de pokemon a nuestro codigo el cual sera : "Metal"
-//Vamos a hacer COMMIT de nuestro codigo y PUSH al branch pokemon
-//despues hacemos un Pullrequest hacia el branch develop con los cambios (hacer un Merge si esta todo bien)
 
 fun main(){
-
+    print("ingrese el numero que corresponda para saber el tipo: ")
+    val pokeType = readLine()!!.toInt()
+    print("ingrese el nombre del pokemon: ")
     val pokeCatch = readLine()!!.toString()
+
     pokedex(pokeCatch)
 
+    tipoPokemon(pokeType)
 
 }
+// ingresando el numero registrado, podemos acceder rapidamente al tipo del pokemon en cuestion
+fun tipoPokemon (type : Int){
+    when (type){
+        1,2,3,4 -> print("Tipo electrico")
+        in 5..11 -> println("Tipo Fuego")
+        in 12..19 -> println("Tipo agua")
+        in 20..29 -> println("Tipo tierra")
+        in 30..35 -> println("Tipo normal")
+        in 36..40 -> println("Tipo fantasma")
+        in 41..45 -> println("Tipo metal")
+        else -> (println("Pokemon desconocido"))
+
+    }
+}
+//conociendo el pokemon el pokemon capturado e ingresando su nombre, te va a decir el tipo
 fun pokedex(pok1 : String ) {
     when (pok1){
         "Pikachu", "Zapdos" -> (print("Tipo electrico"))
