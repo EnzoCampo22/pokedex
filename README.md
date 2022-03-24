@@ -1,0 +1,2 @@
+# pokedex
+ Crear pokedex funcional 
