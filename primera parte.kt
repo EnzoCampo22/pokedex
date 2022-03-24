@@ -25,7 +25,7 @@ fun tipoPokemon (type : Int){
 
     }
 }
-//conociendo el pokemon el pokemon capturado e ingresando su nombre, te va a decir el tipo
+//conociendo el pokemon capturado e ingresando su nombre, te va a decir el tipo
 fun pokedex(pok1 : String ) {
     when (pok1){
         "Pikachu", "Zapdos" -> (print("Tipo electrico"))
